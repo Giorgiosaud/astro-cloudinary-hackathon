@@ -16,10 +16,10 @@ importers:
         version: 3.6.2(@types/react-dom@18.3.1)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.8(sass@1.79.4))
       '@astrojs/tailwind':
         specifier: ^5.1.2
-        version: 5.1.2(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(tailwindcss@3.4.13)
+        version: 5.1.2(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(tailwindcss@3.4.13)
       '@astrojs/vercel':
         specifier: ^7.8.2
-        version: 7.8.2(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(react@18.3.1)
+        version: 7.8.2(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(react@18.3.1)
       '@types/react':
         specifier: ^18.3.11
         version: 18.3.11
@@ -30,11 +30,11 @@ importers:
         specifier: ^2.0.6
         version: 2.0.6
       astro:
-        specifier: ^4.15.12
-        version: 4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
+        specifier: ^4.16.1
+        version: 4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
       astro-cloudinary:
         specifier: ^1.1.0
-        version: 1.1.0(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1)
+        version: 1.1.0(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1)
       cloudinary:
         specifier: ^2.5.1
         version: 2.5.1
@@ -94,8 +94,8 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdown-remark@5.2.0':
-    resolution: {integrity: sha512-vWGM24KZXz11jR3JO+oqYU3T2qpuOi4uGivJ9SQLCAI01+vEkHC60YJMRvHPc+hwd60F7euNs1PeOEixIIiNQw==}
+  '@astrojs/markdown-remark@5.3.0':
+    resolution: {integrity: sha512-r0Ikqr0e6ozPb5bvhup1qdWnSPUvQu6tub4ZLYaKyG50BXZ0ej6FhGz3GpChKpH7kglRFPObJd/bDyf2VM9pkg==}
 
   '@astrojs/prism@3.1.0':
     resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
@@ -1011,8 +1011,8 @@ packages:
     peerDependencies:
       astro: ^3.2.0 || ^4.0.0
 
-  astro@4.15.12:
-    resolution: {integrity: sha512-PojmALAzwafLUD//hqKD4/+1Fj03Aa2VQY/rztCg6DUMgHLpo3TFV3ob1++kay91z/MdNWR+IGITcXhxAXhiTg==}
+  astro@4.16.1:
+    resolution: {integrity: sha512-ZeZd+L147HHgHmvoSkve7KM3EutV+hY0mOCa4PwARHEFAAh+omo4MUNoTWsFkfq7ozTgR0PCXQwslrZduoWHNg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2875,7 +2875,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@5.2.0':
+  '@astrojs/markdown-remark@5.3.0':
     dependencies:
       '@astrojs/prism': 3.1.0
       github-slugger: 2.0.0
@@ -2914,9 +2914,9 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/tailwind@5.1.2(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(tailwindcss@3.4.13)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(tailwindcss@3.4.13)':
     dependencies:
-      astro: 4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
+      astro: 4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -2936,13 +2936,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@7.8.2(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(react@18.3.1)':
+  '@astrojs/vercel@7.8.2(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(react@18.3.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
       '@vercel/analytics': 1.3.1(react@18.3.1)
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.4
-      astro: 4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
+      astro: 4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
       esbuild: 0.21.5
       fast-glob: 3.3.2
       web-vitals: 3.5.2
@@ -3573,12 +3573,12 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@unpic/astro@0.0.46(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))':
+  '@unpic/astro@0.0.46(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))':
     dependencies:
       '@unpic/core': 0.0.49
       '@unpic/pixels': 1.2.2
       '@unpic/placeholder': 0.1.2
-      astro: 4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
+      astro: 4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
       blurhash: 2.0.5
 
   '@unpic/core@0.0.49':
@@ -3749,15 +3749,15 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-cloudinary@1.1.0(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1):
+  astro-cloudinary@1.1.0(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1):
     dependencies:
       '@cloudinary-util/types': 1.5.7
       '@cloudinary-util/url-loader': 5.10.2
       '@cloudinary-util/util': 3.3.2
       '@cloudinary/url-gen': 1.21.0
-      '@unpic/astro': 0.0.46(astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))
+      '@unpic/astro': 0.0.46(astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3))
       '@unpic/core': 0.0.49
-      astro: 4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
+      astro: 4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3)
       tsup: 8.3.0(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.5.1)
       unpic: 3.18.0
     transitivePeerDependencies:
@@ -3770,11 +3770,11 @@ snapshots:
       - typescript
       - yaml
 
-  astro@4.15.12(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3):
+  astro@4.16.1(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
-      '@astrojs/markdown-remark': 5.2.0
+      '@astrojs/markdown-remark': 5.3.0
       '@astrojs/telemetry': 3.1.0
       '@babel/core': 7.25.7
       '@babel/plugin-transform-react-jsx': 7.25.7(@babel/core@7.25.7)
@@ -3802,7 +3802,6 @@ snapshots:
       esbuild: 0.21.5
       estree-walker: 3.0.3
       fast-glob: 3.3.2
-      fastq: 1.17.1
       flattie: 1.1.1
       github-slugger: 2.0.0
       gray-matter: 4.0.3
@@ -3823,7 +3822,6 @@ snapshots:
       rehype: 13.0.2
       semver: 7.6.3
       shiki: 1.22.0
-      string-width: 7.2.0
       tinyexec: 0.3.0
       tsconfck: 3.1.3(typescript@5.6.3)
       unist-util-visit: 5.0.0
