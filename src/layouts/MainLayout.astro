@@ -1,0 +1,42 @@
+---
+import {  } from 'fulldev-ui'
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style is:global>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <link rel="icon" href='/astro-examples/favicon.ico' />
+    <meta property="og:image" content="https://microwebstacks.github.io/astro-examples/screenshot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/custom.css">
+    
+</head>
+<body class="bg-gray-500 min-h-dvh grid place-items-center">
+    <slot />
+</body>
+</html>
+
+<style is:global>
+    * {
+        font-family: "Denk One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+   
+</style>

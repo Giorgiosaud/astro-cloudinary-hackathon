@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import history from '../../assets/history.json'
+import Heading from "../../components/Heading.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+export const getStaticPaths = (async () => {
+    const paths = history.historias.map((h) => ({
+        params: { titulo: h.imagen.split('.')[0] },
+    }));
+    return paths;
+}) satisfies GetStaticPaths;
+const { titulo } = Astro.params;
+const historia = history.historias.find((h) => h.imagen.split('.')[0] === titulo);
+---
+<MainLayout title={titulo}>
+<div class="container grid place-items-center">
+    <img src="" alt={titulo} class="max-w-full aspect-video">
+    <Heading transition:name={titulo} title={historia.titulo} ></Heading>
+<!--img class="w-3/4 text-center" transition:name={historia.imagen.split('.')[0]} src=`/src/assets/historias/${historia.imagen}` alt={historia.titulo} /--> 
+</div>
+</MainLayout>
+<script>
+    const img=document.querySelector('img')
+
+    const request= new URL(window.location.href);
+    const response= await fetch(`/upload?fondo=hackathon/${img.alt}&foto=${request.searchParams.get('imagen')}`)
+    const json=await response.json()
+    console.log(json)
+    img.src=json.s
+</script>

@@ -1,0 +1,219 @@
+{
+    "historias": [
+      {
+        "titulo": "El Eco de las Sombras",
+        "imagen":"el-eco-de-las-sombras.png",
+        "partes": [
+          {
+            "parte": 1,
+            "descripcion": "Entras sigilosamente a la casa, el viento silba por las grietas de las ventanas rotas. Un pasillo oscuro se abre ante ti, y algo en el aire te hace sentir observado. Decides avanzar despacio.",
+            "opciones": [
+              "Seguir avanzando por el pasillo.",
+              "Gritar '¿Hay alguien aquí?'.",
+              "Intentar salir, pero la puerta está cerrada."
+            ]
+          },
+          {
+            "parte": 2,
+            "descripcion": "Ignoras los susurros provenientes de una puerta lateral, aunque el sonido de pasos se intensifica detrás de ti. Sigues avanzando, sintiendo una presencia cada vez más cerca.",
+            "opciones": [
+              "Acercarse a la puerta lateral.",
+              "Seguir caminando por el pasillo.",
+              "Tomar uno de los cuadros de la pared."
+            ]
+          },
+          {
+            "parte": 3,
+            "descripcion": "De repente, las sombras te rodean. Te armas de valor y enfrentas a las figuras. Una sombra toma forma humana y, para tu sorpresa, parece alguien conocido... ¡es tu propio reflejo! Antes de que puedas reaccionar, te absorbe.",
+            "opciones": [
+              "Intentar escapar corriendo.",
+              "Enfrentar las sombras.",
+              "Refugiarse detrás de una puerta."
+            ]
+          },
+          {
+            "parte": 4,
+            "descripcion": "Estás en una habitación donde un enorme espejo se alza frente a ti. Decides tocarlo, y sientes un frío helado. Tu reflejo desaparece, y el espejo te muestra a alguien escribiendo… es el autor, Jorge, que sonríe y susurra: 'Ya no estás solo…'.",
+            "opciones": [
+              "Tocar el espejo.",
+              "Romper el espejo.",
+              "Dar la espalda y salir de la sala."
+            ]
+          }
+        ],
+        "final": "El espejo se rompe en mil pedazos, y te encuentras atrapado dentro de él, observando cómo Jorge escribe el resto de la historia… tu historia, ahora encerrado en su mundo de sombras."
+      },
+      {
+        "titulo": "La Puerta Sellada",
+        "imagen":"la-puerta-sellada.png",
+        "partes": [
+          {
+            "parte": 1,
+            "descripcion": "Entras en la casa con una sensación de alerta. Gritas: '¿Hay alguien aquí?', pero solo recibes un eco que retumba en el vacío. El portón detrás de ti se cierra de golpe. Estás atrapado.",
+            "opciones": [
+              "Intentar abrir la puerta.",
+              "Avanzar por el pasillo oscuro.",
+              "Escuchar el eco."
+            ]
+          },
+          {
+            "parte": 2,
+            "descripcion": "Decides acercarte a la puerta de donde provienen susurros. Al tocar el picaporte, una sensación de frío te recorre el cuerpo, pero decides entrar. La puerta cruje mientras se abre lentamente, revelando un cuarto vacío.",
+            "opciones": [
+              "Entrar a la sala.",
+              "Seguir por el pasillo.",
+              "Correr hacia otra dirección."
+            ]
+          },
+          {
+            "parte": 3,
+            "descripcion": "De repente, las luces parpadean y las sombras se mueven rápidamente. Corres en dirección contraria, pero el pasillo se extiende sin fin. A pesar de todo, no logras escapar.",
+            "opciones": [
+              "Correr hacia la salida.",
+              "Entrar a la puerta más cercana.",
+              "Gritar por ayuda."
+            ]
+          },
+          {
+            "parte": 4,
+            "descripcion": "Encuentras un gran espejo. Decides romperlo en un acto desesperado. El sonido del cristal quebrándose llena el aire, y una figura oscura emerge de los pedazos rotos.",
+            "opciones": [
+              "Correr hacia la figura.",
+              "Tratar de reparar el espejo.",
+              "Huir de la habitación."
+            ]
+          }
+        ],
+        "final": "Al final del pasillo, una puerta cerrada te espera. La pateas con fuerza, y te encuentras en una sala con una sola cosa dentro: un escritorio con una nota. 'Te estaba esperando. —Jorge.' Mientras lees, la figura oscura del espejo te agarra, llevándote al vacío."
+      },
+      {
+        "titulo": "La Sala Perdida",
+        "imagen": "la-sala-perdida.png",
+        "partes": [
+          {
+            "parte": 1,
+            "descripcion": "Das media vuelta para intentar salir de la casa, pero la puerta se cierra bruscamente. Sabes que no tienes opción más que avanzar.",
+            "opciones": [
+              "Buscar otra salida.",
+              "Caminar por el pasillo.",
+              "Golpear la puerta para abrirla."
+            ]
+          },
+          {
+            "parte": 2,
+            "descripcion": "Decides tomar uno de los cuadros de la pared. Al sostenerlo, notas que algo en la pintura se mueve. El calor del cuadro te abruma, pero algo en ti siente curiosidad. Al mover el cuadro, una puerta secreta se revela detrás.",
+            "opciones": [
+              "Entrar por la puerta secreta.",
+              "Dejar el cuadro y seguir caminando.",
+              "Volver a la entrada."
+            ]
+          },
+          {
+            "parte": 3,
+            "descripcion": "Te adentras por el nuevo camino, pero las sombras te rodean. Decides enfrentarlas y descubres que no solo son sombras… son versiones distorsionadas de ti mismo. Cada una más oscura que la anterior.",
+            "opciones": [
+              "Enfrentar las sombras.",
+              "Huir de las sombras.",
+              "Esconderte en una esquina."
+            ]
+          },
+          {
+            "parte": 4,
+            "descripcion": "Llegas a una sala con un espejo, pero esta vez decides no mirarlo. Continúas hacia adelante, sintiendo que algo te sigue a cada paso. Te niegas a mirar atrás.",
+            "opciones": [
+              "Salir de la sala rápidamente.",
+              "Mirar hacia atrás.",
+              "Abrir la puerta siguiente."
+            ]
+          }
+        ],
+        "final": "Al final del camino, una puerta se abre sola. Al entrar, ves a Jorge sentado, escribiendo. 'No era la casa lo que te perseguía. Era lo que traías contigo.' La figura oscura de tus reflejos te alcanza, y te das cuenta de que siempre fuiste parte de la historia de Jorge."
+      },
+      {
+        "titulo": "El Reflejo Final",
+        "imagen": "el-reflejo-final.png",
+        "partes": [
+          {
+            "parte": 1,
+            "descripcion": "Entrando sigilosamente a la casa, avanzas con cuidado. El silencio es ensordecedor, y algo parece moverse en las sombras de los pasillos.",
+            "opciones": [
+              "Avanzar hacia el interior.",
+              "Intentar salir.",
+              "Encender una linterna."
+            ]
+          },
+          {
+            "parte": 2,
+            "descripcion": "Ignoras los susurros y sigues caminando, pero cada paso que das parece resonar como si no estuvieras solo. La atmósfera se vuelve más pesada.",
+            "opciones": [
+              "Escuchar los susurros.",
+              "Seguir adelante.",
+              "Abrir una puerta cercana."
+            ]
+          },
+          {
+            "parte": 3,
+            "descripcion": "Decides refugiarte detrás de una puerta cercana. Al entrar, te das cuenta de que la habitación en la que te encuentras no tiene salida. Solo un espejo te refleja, y tu reflejo sonríe mientras tú no lo haces.",
+            "opciones": [
+              "Romper el espejo.",
+              "Tocar el espejo.",
+              "Ignorar el espejo."
+            ]
+          },
+          {
+            "parte": 4,
+            "descripcion": "Rompes el espejo en un arrebato de desesperación. Pero al romperse, tu reflejo sale del espejo, tomando forma física, mientras tú te quedas atrapado al otro lado.",
+            "opciones": [
+              "Enfrentar a tu reflejo.",
+              "Intentar escapar.",
+              "Mirar a través del espejo roto."
+            ]
+          }
+        ],
+        "final": "Al abrir la puerta que te lleva al final de tu travesía, ves a Jorge sonriendo mientras escribe: 'Ahora, has tomado su lugar… y él ha tomado el tuyo.' Mientras tu reflejo vive tu vida, quedas atrapado como un simple personaje en la historia."
+      },
+      {
+        "titulo": "La Decisión del Espejo",
+        "imagen": "la-decision-del-espejo.png",
+        "partes": [
+          {
+            "parte": 1,
+            "descripcion": "Entras gritando a la casa, tratando de intimidar a lo que sea que se esconde en la oscuridad. El eco de tu voz parece cobrar vida.",
+            "opciones": [
+              "Escuchar el eco.",
+              "Seguir explorando.",
+              "Cerrar la puerta tras de ti."
+            ]
+          },
+          {
+            "parte": 2,
+            "descripcion": "Decides entrar a la sala de los susurros. Al hacerlo, te das cuenta de que la habitación parece mayor por dentro de lo que debería. En medio, un gran espejo refleja algo que no coincide con tu entorno.",
+            "opciones": [
+              "Ignorar el espejo.",
+              "Examinar el espejo.",
+              "Salir de la sala."
+            ]
+          },
+          {
+            "parte": 3,
+            "descripcion": "El espejo comienza a temblar, y una mano sale de él, imitando tus movimientos. Sin embargo, cuando intentas retroceder, el espejo te impide moverte, y la mano te agarra.",
+            "opciones": [
+              "Romper el espejo.",
+              "Enfrentar la mano.",
+              "Gritar por ayuda."
+            ]
+          },
+          {
+            "parte": 4,
+            "descripcion": "Te enfrentas al reflejo distorsionado, que toma forma humana. Antes de que puedas reaccionar, intercambian lugares, y tú te conviertes en el reflejo dentro del espejo, mientras tu copia vive tu vida.",
+            "opciones": [
+              "Intentar romper el espejo desde dentro.",
+              "Rendirse.",
+              "Tratar de advertir a otros."
+            ]
+          }
+        ],
+        "final": "Al romper el espejo desde dentro, lo único que consigues es sellar tu destino. Ahora eres una sombra atrapada, observando cómo tu reflejo vive en el mundo real. Jorge sonríe al terminar de escribir la última línea."
+      }
+    ]
+  }

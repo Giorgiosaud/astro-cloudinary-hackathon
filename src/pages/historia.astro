@@ -1,0 +1,85 @@
+---
+
+import history from '../assets/history.json'
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from '../components/Heading.astro'
+import history from '../assets/history.json'
+import SliderSelector from '../components/SliderSelector.astro';
+---
+
+<MainLayout title="Welcome to Astro.">
+	<div class="container mx-auto text-center">
+		<Heading transition:name='heading' title="Una historia de Terror Interactiva"></Heading>
+		<p class="py-6 text-center w-full text-2xl">
+			¿Que historia quieres jugar?
+		</p>
+		<SliderSelector stories={history.historias} />  
+	</div>
+	<video id="video" class="hidden" autoplay></video>
+	<canvas id="canvas" width="2048" height="1024" class=""></canvas>	
+</MainLayout>
+<script>	
+
+
+	const video = document.getElementById('video');
+	const canvas = document.getElementById('canvas');
+	const takePic=()=>{
+	video.classList.add('hidden');
+		const context = canvas.getContext('2d');
+		context.drawImage(video, 0, 0, canvas.width, canvas.height);
+		canvas.toBlob(async(blob)=>{
+			if(blob){
+				console.log(blob);
+				const formData = new FormData();
+				formData.append('file', blob);
+				
+				// Llamada a la API de Cloudinary
+				const response = await fetch('/upload', {
+					headers: {
+					},
+					method: 'POST',
+					body: formData
+				});
+
+				const data = await response.json();
+				console.log('URL de la imagen subida:', data.secure_url);
+				const slider=document.querySelector('#slider')
+				slider.classList.remove('pointer-events-none')
+				slider.querySelectorAll('a').forEach(a=>a.href=a.href+'?imagen='+data.public_id)
+			}
+		})
+	}
+	async function getMedia(constraints) {
+		let stream = null;
+		
+		try {
+			stream = await navigator.mediaDevices.getUserMedia(constraints);
+			video.srcObject = stream;
+			video.onloadedmetadata = () => {
+      			video.play();
+				setTimeout(takePic,1000);
+				setTimeout(()=>video.pause(),3000); 
+			};
+		} catch (error) {        
+			console.error('Error accessing the camera:', error);
+		}
+	}
+	
+	getMedia({
+		audio: false,
+		video: {
+			width: 1280, 
+			height: 720,
+			facingMode: "user",
+		},
+	})
+
+	document.querySelectorAll('button.slide').forEach(button => {
+		button.addEventListener('click', () => {
+			const context = canvas.getContext('2d');
+			const image = button.querySelector('img');
+			context.drawImage(video, 0, 0, canvas.width, canvas.height);
+			const dataUrl = canvas.toDataURL('image/png');
+		});
+	});
+</script>

@@ -1,0 +1,82 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+<h1 data-content={title} class="container mx-auto text-4xl my-6 relative opacity-80">
+    {title}
+</h1>
+
+<style>
+    h1 {
+        text-align: center;
+        color: var(--accent-gradient);
+        --deepth: 15px;
+        animation: flash 1s ease-in-out infinite;
+    }
+    h1::after{
+        content: attr(data-content);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        color: red;
+        top: 4px;
+        animation:vibrato 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        
+    }
+    @keyframes flash {
+        0% {
+            filter:brightness(0.5);
+        }
+        15%{
+            filter:brightness(0.5);
+        }
+        20%{
+            filter:brightness(1.5);
+        }
+        25%{
+            filter:brightness(0.5);
+        }
+        45%{
+            filter:brightness(0.5);
+        }
+        50% {
+            filter:brightness(1.5);
+        }
+        55% {
+            filter:brightness(0.5);
+        }
+        100% {
+            filter:brightness(0.5);
+        }
+        
+    }
+    @keyframes vibrato {
+        0% {
+            filter: blur(0px);
+            transform: translate(0,0);
+        }
+        25% {
+            filter: blur(var(--deepth));
+            
+            transform: translate(var(--deepth),var(--deepth));
+        }
+        50% {
+            filter: blur(0);
+            transform: translate(0,0);
+        }
+        75% {
+            filter: blur(var(--deepth));
+            transform: translate(-var(--deepth),-var(--deepth));
+        }
+        100% {
+            filter: blur(var(--deepth));
+            transform: translate(0,0);
+        }
+    }
+    
+</style>

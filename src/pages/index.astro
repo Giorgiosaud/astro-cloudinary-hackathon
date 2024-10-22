@@ -1,16 +1,42 @@
 ---
 
+import history from '../assets/history.json'
+import { CldUploadWidget } from "astro-cloudinary";
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from '../components/Heading.astro'
+import { ScaryStoryComponent } from "../components/ScaryStoryComponent";
+import InteractiveStory from "../components/InteractiveStory";
+import history from '../assets/history.json'
+import SliderSelector from '../components/SliderSelector.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Welcome to Astro.">
+	<div class=" grid place-items-center mx-auto text-center">
+		<Heading transition:name='heading' title="Una historia de Terror Interactiva"></Heading>
+	<button id="play"  class="bg-red-500 text-yellow-800 rounded hover:bg-red-600 transition-all duration-1000 hover:text-red-950 px-10 py-3">Juega la historia</button>
+</div>
+	<!--p class="py-6 text-center w-full text-2xl">
+		¿Que historia quieres jugar?
+	</p-->
+	<!--SliderSelector stories={history.historias} /-->
+	<!--CldUploadWidget uploadPreset="hackathon" id="uploader">
+		<button>Upload</button>
+		</CldUploadWidget-->
+	<!--div class="py-6">
+	
+	</div>
+	<h1>Interactive Scary Story</h1>
+	<ScaryStoryComponent client:load />
+	<p>
+	Welcome to the official <a href="https://astro.build/">Astro</a> documentation. This is a
+	template for building a simple blog website with <a href="https://astro.build/">Astro</a>.
+	Check out the <a href="https://github.com/withastro/astro/tree/main/examples/blog">source code</a>.
+	</p-->	
+</MainLayout>
+<style></style>
+<script>
+	const play=document.getElementById('play');
+	play.addEventListener('click',()=>{
+		window.location.href='/historia';
+	})
+</script>
