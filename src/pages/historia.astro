@@ -3,7 +3,6 @@
 import history from '../assets/history.json'
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from '../components/Heading.astro'
-import history from '../assets/history.json'
 import SliderSelector from '../components/SliderSelector.astro';
 ---
 
@@ -21,8 +20,8 @@ import SliderSelector from '../components/SliderSelector.astro';
 <script>	
 
 
-	const video = document.getElementById('video');
-	const canvas = document.getElementById('canvas');
+	const video = document.getElementById('video') as HTMLVideoElement;
+	const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 	const takePic=()=>{
 	video.classList.add('hidden');
 		const context = canvas.getContext('2d');
@@ -49,7 +48,14 @@ import SliderSelector from '../components/SliderSelector.astro';
 			}
 		})
 	}
-	async function getMedia(constraints) {
+	async function getMedia(constraints:{
+		audio: boolean;
+		video: {
+			facingMode: "user";
+			width: number;
+			height: number;
+		};
+	}) {
 		let stream = null;
 		
 		try {
@@ -80,6 +86,7 @@ import SliderSelector from '../components/SliderSelector.astro';
 			const image = button.querySelector('img');
 			context.drawImage(video, 0, 0, canvas.width, canvas.height);
 			const dataUrl = canvas.toDataURL('image/png');
+			console.log(dataUrl,image)
 		});
 	});
 </script>

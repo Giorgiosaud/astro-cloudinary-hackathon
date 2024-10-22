@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Define types for our data structure
 type Option = string;
@@ -31,7 +31,7 @@ export default function InteractiveStory({ data }: InteractiveStoryProps) {
 
   const story = data.historias[currentStory];
 
-  const handleChoice = (choice: number) => {
+  const handleChoice = () => {
     if (currentPart < story.partes.length - 1) {
       setCurrentPart(currentPart + 1);
     } else {
@@ -60,7 +60,7 @@ export default function InteractiveStory({ data }: InteractiveStoryProps) {
             {story.partes[currentPart].opciones.map((option, index) => (
               <button
                 key={index}
-                onClick={() => handleChoice(index)}
+                onClick={() => handleChoice()}
                 className="w-full p-2 bg-gray-200 hover:bg-gray-300 rounded"
               >
                 {option}

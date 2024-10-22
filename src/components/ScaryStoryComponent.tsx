@@ -1,5 +1,5 @@
 // src/components/ScaryStoryComponent.tsx
-import React, { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import Webcam from 'react-webcam';
 
 export function ScaryStoryComponent() {
@@ -70,7 +70,7 @@ export function ScaryStoryComponent() {
     setIsCapturing(false);
   }, [storyProgress]);
 
-  const handleResponse = async (response) => {
+  const handleResponse = async (response:string) => {
     setUserResponses([...userResponses, response]);
     
     if (storyProgress < storySegments.length - 1) {

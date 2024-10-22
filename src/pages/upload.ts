@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro"
 import {v2 as cloudinary} from 'cloudinary'
-import {} from 'cloudinary'
+import { Readable } from "stream";
+
 export const prerender = false;
 cloudinary.config({
     cloud_name: import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -9,20 +10,23 @@ cloudinary.config({
     secure: true,
     folder: 'hackathon'
 })
-const uploadStream = async (buffer: Uint8Array,options: any) => {
+const uploadStream = async (file: File,options: any) => {
     options.folder="hackathon";
     options.background_removal= "cloudinary_ai";
 
-    return new Promise((resolve,reject)=>{
-        return cloudinary.uploader.upload_stream(options,(err,result)=>{
-            if(err){
-                console.log('theTransformStream',err);
-                reject(err)
-            }else{
-                console.log('theTransformStream',result);
-                resolve(result)
+    return new Promise(async(resolve,reject)=>{
+        const buffer = await file.stream();
+        options.background_removal= "cloudinary_ai";
+        options.folder="hackathon";
+        const theTransformStream = cloudinary.uploader.upload_stream(
+            options,
+            (err, result) => {
+              if (err) return reject(err);
+              resolve(result);
             }
-        }).end(buffer);
+          );
+          let str = Readable.from(buffer);
+          return str.pipe(theTransformStream);
     })
 }
 export const POST: APIRoute = async ({ request }) => {
@@ -32,7 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
         console.log(file);
         const buffer = await file.arrayBuffer();
         const unit8Array= new Uint8Array(buffer);
-        const result = await uploadStream(unit8Array,{
+        const result = await uploadStream(file,{
             tags: 'hackathon'
         })
         console.log(result);
@@ -59,7 +63,7 @@ export const GET: APIRoute = async({ params, request }) => {
     const fondo=url.searchParams.get('fondo')
     const foto=url.searchParams.get('foto')
     console.log(foto,fondo)
-    const s=await cloudinary.url(fondo,{
+    const s = cloudinary.url(fondo,{
         transformation: {
         overlay: foto.replace('/',':'),
         width:800,
